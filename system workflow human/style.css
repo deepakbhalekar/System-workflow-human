@@ -1,0 +1,130 @@
+/* General Accessibility and Mobile-First Styling */
+body {
+    font-family: sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+    padding: 10px;
+    margin: 0;
+}
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+h1, h2 {
+    color: #004d40; /* Dark Green - Trustworthy, Government feel */
+    text-align: center;
+}
+h2 {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+/* Selection and Input */
+.selection-box {
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid #004d40;
+    border-radius: 5px;
+    font-size: 1.1em;
+    background-color: #e8f5e9; /* Light green background */
+}
+label {
+    display: block;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Performance Report */
+.hidden {
+    display: none;
+}
+.report-box {
+    border-top: 3px solid #00796b;
+    padding-top: 15px;
+}
+.metric-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+.metric-card {
+    flex: 1 1 45%; /* Two cards per row on mobile */
+    background-color: #fff;
+    border: 1px solid #eee;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+.icon {
+    font-size: 2.5em; /* Large Icons */
+    display: block;
+    margin-bottom: 5px;
+}
+.metric-label {
+    font-size: 0.9em;
+    margin: 0;
+    color: #555;
+}
+.metric-value {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #00796b;
+    margin: 5px 0 0 0;
+}
+
+/* Color-Coding for Payment Metric */
+.payment-good { color: #4caf50; font-weight: bold; } /* Green */
+.payment-average { color: #ffeb3b; font-weight: bold; } /* Yellow */
+.payment-poor { color: #f44336; font-weight: bold; } /* Red */
+
+/* Chart Placeholder */
+.history-box {
+    padding: 15px;
+    background-color: #e8f5e9;
+    border-radius: 8px;
+}
+.chart-placeholder {
+    height: 100px;
+    background-color: #c8e6c9;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #004d40;
+    font-style: italic;
+    font-size: 0.9em;
+}
+
+.small-text {
+    font-size: 0.8em;
+    color: #777;
+    margin-top: 5px;
+}
+.footer-note {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 0.7em;
+    color: #aaa;
+}
+#lang-toggle {
+    float: right;
+    padding: 5px 10px;
+    border: 1px solid #004d40;
+    background-color: transparent;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 0.9em;
+}

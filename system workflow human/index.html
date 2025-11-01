@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>हमारी आवाज़, हमारे अधिकार - मनरेगा</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>हमारी आवाज़, हमारे अधिकार 📢</h1>
+        <h2>आपके जिले का मनरेगा प्रदर्शन</h2>
+
+        <button id="lang-toggle" onclick="toggleLanguage()">English</button>
+
+        <div class="selection-box">
+            <p id="p-state">राज्य: **राजस्थान**</p>
+            <label for="district-select" id="l-select">आपका जिला चुनें:</label>
+            <select id="district-select" onchange="loadDistrictPerformance(this.value)">
+                <option value="" disabled selected id="o-default">--- जिला चुनें ---</option>
+                </select>
+            <p class="small-text" id="p-bonus">🌍 अपने जिले को स्वतः खोजने के लिए अनुमति दें (Bonus)</p>
+        </div>
+
+        <div id="performance-report" class="report-box hidden">
+            <h3 id="report-title"></h3>
+            <div class="metric-container">
+                <div class="metric-card">
+                    <span class="icon">👥</span>
+                    <p class="metric-label" id="m1-label">कितने लोगों ने काम माँगा</p>
+                    <p class="metric-value" id="metric-demand"></p>
+                </div>
+                <div class="metric-card">
+                    <span class="icon">👷</span>
+                    <p class="metric-label" id="m2-label">कितने लोगों को काम मिला</p>
+                    <p class="metric-value" id="metric-provided"></p>
+                </div>
+                <div class="metric-card">
+                    <span class="icon" id="payment-icon"></span>
+                    <p class="metric-label" id="m3-label">पैसा सही समय पर मिला?</p>
+                    <p class="metric-value" id="metric-payment-rate"></p>
+                </div>
+            </div>
+
+            <div class="history-box">
+                <h4 id="h-title">पिछले 6 महीनों का प्रदर्शन (ग्राफ)</h4>
+                <div id="historical-chart" class="chart-placeholder">
+                    <p id="chart-data-p">... सरल बार चार्ट यहाँ प्रदर्शित होगा ...</p>
+                </div>
+            </div>
+        </div>
+        
+        <p class="footer-note" id="p-footer">** यह डेटा सरकारी पोर्टल से प्राप्त किया गया है।</p>
+    </div>
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
